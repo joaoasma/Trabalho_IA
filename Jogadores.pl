@@ -45,3 +45,9 @@ maior(X, Y) :- X > Y.
 menor_ou_igual(X, Y) :- X =< Y.
 
 % ===== FATOS =====
+
+% Situação A:
+
+% Situação B:
+
+% Situação C:
