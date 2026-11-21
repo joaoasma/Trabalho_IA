@@ -1,4 +1,4 @@
-# Inteligência Artificial - 2025/2
+# Inteligência Artificial - 2026/2
 **Professora:** Heloisa  
 **Trabalho:** Segundo Trabalho - Algoritmo de Encadeamento para Trás em Prolog  
 
