@@ -1,3 +1,6 @@
+% Bruno Spegiorin Moreno Gomes – 854857 
+% João Antônio de Souza Martins – 854847
+
 % ===== BASE DE CONHECIMENTO =====
 % Com as cláusulas de primeira ordem
 
@@ -45,9 +48,69 @@ maior(X, Y) :- X > Y.
 menor_ou_igual(X, Y) :- X =< Y.
 
 % ===== FATOS =====
+% Descomente UMA situação por vez e comente as demais.
 
-% Situação A:
+% ---- Situação A: esperado -> [equipe_tecnica] ----
+preparo_fisico(bom).
+jogador(jorge).
+cartao_vermelho(jorge).
+tecnico(t1).                  % Skolem: existe x, Tecnico(x)
+discute(jorge, t1).
+lento(nenhum).
+faltou_do_treino(nenhum).
+salarios(parcial).
+gols_sofridos(0).
+gols_feitos(0).
 
-% Situação B:
+% ---- Situação B: esperado -> [preparo_fisico, insatisfacao_financeira] ----
+% tecnico(t1).                % Skolem: existe x, Tecnico(x)
+% gols_sofridos(1).
+% gols_feitos(2).
+% salarios(atrasados).
+% jogador(lucas).
+% lento(lucas).
+% jogador(j1).                % Skolem: existe x, y
+% jogador(j2).
+% discute(j1, j2).
+% % fatos para evitar predicado não definido
+% cartao_vermelho(nenhum).
+% faltou_do_treino(nenhum).
 
-% Situação C:
+% ---- Situação C: esperado -> [] (nenhum problema identificado) ----
+% jogador(j3).                % Skolem: existe x, Jogador(x) e Cartao_vermelho(x)
+% cartao_vermelho(j3).
+% gols_sofridos(3).
+% gols_feitos(5).
+% % fatos para evitar predicado não definido
+% tecnico(t1).
+% discute(nenhum, nenhum).
+% lento(nenhum).
+% faltou_do_treino(nenhum).
+% salarios(parcial).
+
+% ---- Situação D (extra): esperado -> [time] ----
+% preparo_fisico(bom).
+% atritos(raros).
+% gols_sofridos(5).
+% gols_feitos(2).
+% % fatos para evitar predicado não definido
+% jogador(carlos).
+% tecnico(t1).
+% discute(nenhum, nenhum).
+% cartao_vermelho(nenhum).
+% lento(nenhum).
+% faltou_do_treino(nenhum).
+% salarios(parcial).
+
+% ---- Situação E (extra): esperado -> [nenhum] ----
+% preparo_fisico(bom).
+% gols_sofridos(1).
+% gols_feitos(2).
+% salarios(em_dia).
+% % fatos para evitar predicado não definido
+% jogador(carlos).
+% tecnico(t1).
+% discute(nenhum, nenhum).
+% cartao_vermelho(nenhum).
+% lento(nenhum).
+% faltou_do_treino(nenhum).
